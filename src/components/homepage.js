@@ -35,7 +35,7 @@ export default function HomePage(props) {
 
         </section>
 
-        <footer role="content-info">Footer</footer>
+        <footer>Footer</footer>
     </main>
 		)
 }
