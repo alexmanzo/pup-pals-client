@@ -1,0 +1,11 @@
+.homepage-photo {
+    display: inline-block;
+    margin: 0 auto;
+    height: 20%;
+    width: 20%;
+}
+
+.photo-text {
+	display: inline-block;
+	width: 30%;
+}

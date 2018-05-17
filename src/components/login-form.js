@@ -1,14 +1,10 @@
 import React from 'react'
 import {Field, reduxForm} from 'redux-form'
 
-let RegistrationForm = props => {
+let LoginForm = props => {
     const { handleSubmit } = props
     return (
         <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="ownerName">Your name</label>
-                <Field component="input" type="text" name='ownerName'placeholder='Dog Parent' />
-            </div>
             <div>
                 <label htmlFor="username">Email</label>
                 <Field component="input" type="text" name="username"/>
@@ -17,11 +13,11 @@ let RegistrationForm = props => {
                 <label htmlFor="password">Password</label>
                 <Field component="input" type="password" name="password"/>
             </div>
-            <button type='submit'>Sign Up</button>
+            <button type='submit'>Sign In</button>
         </form>
     )
 }
 
-RegistrationForm = reduxForm({ form: 'registration' })(RegistrationForm)
+LoginForm = reduxForm({ form: 'login' })(LoginForm)
 
-export default RegistrationForm
+export default LoginForm

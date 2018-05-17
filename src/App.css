@@ -11,15 +11,9 @@ body {
   line-height: 1.5;
 }
 
-
 footer {
   padding: 1% 0;
   background-color: #aaa;
-}
-
-
-header {
-  padding-top: 4%;
 }
 
 section {
@@ -30,4 +24,12 @@ section {
 
 section:nth-child(even) {
   background-color: #ddd;
+}
+
+@media screen and (min-width: 600px) {
+
+  header {
+    padding-top: 3%;
+}
+
 }
