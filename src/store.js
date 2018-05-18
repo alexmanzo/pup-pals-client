@@ -10,4 +10,4 @@ const store = createStore(combineReducers({
 	form: formReducer
 }))
 
-export default store;
+export default store
