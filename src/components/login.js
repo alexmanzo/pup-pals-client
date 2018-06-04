@@ -1,11 +1,18 @@
 import React from 'react'
-import {Field, reduxForm} from 'redux-form'
 import LoginForm from './login-form'
+import { connect } from 'react-redux'
+import { updateNavBar } from '../actions/navbar'
+import {login} from '../actions/auth'
 
 
-export default class Login extends React.Component {
+export class Login extends React.Component {
     submit = values => {
-        console.log(values)
+        return this.props.dispatch(login(values.username, values.password))
+    }
+
+    componentDidMount() {
+        const currentPage = this.props.location.pathname
+        this.props.dispatch(updateNavBar(currentPage))
     }
 
     render() {
@@ -21,3 +28,10 @@ export default class Login extends React.Component {
             )
     }
 }
+
+const mapStateToProps = state => ({
+    navItems: state.nav.navItems
+})
+
+
+export default connect(mapStateToProps)(Login)

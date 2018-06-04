@@ -12,7 +12,10 @@ const initialState = {
 			ownerPhotoAlt: 'Short brown haired woman holding a black dog.',
 			ownerName: 'Michelle Dogowner',
 			ownerAge: 28,
-			contact: '555-555-5555'
+			number: '555-555-5555',
+			address: '25 Meadowbrook Dr',
+			city: 'Durham',
+			state: 'NC'
 		}
 	}
 }

@@ -19,6 +19,18 @@ let OwnerInfo = props => {
                 <Field component="input" type="tel" name="phone-number"/>
             </div>
             <div>
+                <label htmlFor="address">Address</label>
+                <Field component="input" type="text" name="address"/>
+            </div>
+            <div>
+                <label htmlFor="city">City</label>
+                <Field component="input" type="text" name="city"/>
+            </div>
+            <div>
+                <label htmlFor="state">State</label>
+                <Field component="input" type="text" name="state"/>
+            </div>
+            <div>
                 <Field component="input" type="file" name="profile-pic" accept="image/*"/>
             </div>
             <button type='submit'>Save</button>

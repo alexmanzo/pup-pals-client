@@ -1,18 +1,23 @@
 import React from 'react'
 import RegistrationForm from './registration-form'
+import { connect } from 'react-redux'
 import { registerUser } from '../actions/users'
 import './homepage.css'
+import { updateNavBar } from '../actions/navbar'
 
 
-export default class HomePage extends React.Component {
+export class HomePage extends React.Component {
 
    submit = values => {
-        console.log(values)
-        const { name, username, password } = values
-        const user = { name, username, password }
-
+        const { ownerName, username, password } = values
+        const user = { ownerName, username, password }
         return this.props
             .dispatch(registerUser(user))
+    }
+
+    componentDidMount() {
+        const currentPage = this.props.location.pathname
+        this.props.dispatch(updateNavBar(currentPage))
     }
 
     render() {
@@ -53,3 +58,11 @@ export default class HomePage extends React.Component {
     		)
     }
 }
+
+const mapStateToProps = state => ({
+    navItems: state.nav.navItems
+})
+
+
+export default connect(mapStateToProps)(HomePage)
+
