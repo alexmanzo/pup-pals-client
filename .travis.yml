@@ -1,7 +1,7 @@
  language: node_js
  node_js:
-  - 'node'
-  - '9.11.0'
+  - "node"
+  - "9.11.1"
  cache:
    directories:
      - node_modules
@@ -11,12 +11,12 @@
    - CI=true
 
  before_deploy:
-   - npm global add netlify-cli
+   - npm install netlify-cli -g
    - npm run build
 
-deploy:
-  provider: script
-  script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./build
-  skip_cleanup: true
-  on:
-    branch: master
+ deploy:
+   provider: script
+   script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./build
+   skip_cleanup: true
+   on:
+     branch: master
