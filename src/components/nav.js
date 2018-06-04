@@ -24,7 +24,7 @@ export class Nav extends React.Component {
 			<div className="search">
 				<label htmlFor="search">Search for pups near you:</label>
 				<input type="text" name="search" placeholder="Enter zip code"/>
-				<button type="submit" onClick={this.submit}>Search</button>
+				<button type="submit" onClick={this.submit}>Search for Dogs</button>
 			</div>
 			<ul>
 				{navItems}
